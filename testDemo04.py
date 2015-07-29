@@ -8,6 +8,8 @@ plt.xticks((0.2,1),('male','female'))#为每个bar进行说明，前面的位置
 ##不过这里有个问题，很显然我们指定的位置有些“偏移”，最理想的状态应该在每个矩形的中间。
 ##你可以更改(0,1)=>( (0.2+0.2)/2 ,(1+0.5)/2 )不过这样比较麻烦。
 #我们可以通过直接指定bar方法里面的align="center"就可以让文字居中了。
-plt.bar(left=(0.2,1),height=(2,1),width=(0.2,0.5),align='center')
-plt.title('wojiushimogui')
+plt.bar(left=(0.2,1),height=(2,1),width=(0.2,0.5),align='center',label="wu",xerr=0.0000,yerr=0.000001)#yerr可以使得顶部留有一定的空间
+plt.title('wojiushimogui') #标题
+plt.legend(loc = 'upper right')#图例
+
 plt.show()
